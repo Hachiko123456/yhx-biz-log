@@ -126,6 +126,7 @@ public class OperationLogAspect extends LogValueParser implements InitializingBe
                                     .action(expressionValues.get(action).get(x))
                                     .crtName(!StringUtils.isEmpty(record.getOperator()) ? record.getOperator() : operator.getOperatorName())
                                     .crtUser(!StringUtils.isEmpty(record.getOperator()) ? record.getOperator() : operator.getOperatorId())
+                                    .crtTime(new Date())
                                     .detail(StringUtils.isEmpty(record.getDetail()) ? null : expressionValues.get(record.getDetail()).get(x)).build())
                             .filter(x -> !StringUtils.isEmpty(x.getAction()))
                             .collect(Collectors.toList());
@@ -139,7 +140,7 @@ public class OperationLogAspect extends LogValueParser implements InitializingBe
                                 .action(expressionValues.get(action))
                                 .crtName(!StringUtils.isEmpty(record.getOperator()) ? record.getOperator() : operator.getOperatorName())
                                 .crtUser(!StringUtils.isEmpty(record.getOperator()) ? record.getOperator() : operator.getOperatorId())
-                                .detail(expressionValues.get(record.getDetail())).build();
+                                .detail(expressionValues.get(record.getDetail())).crtTime(new Date()).build();
                         if (!StringUtils.isEmpty(commonLog.getAction())) {
                             // 开启新事务
                             logService.record(commonLog);
@@ -180,6 +181,7 @@ public class OperationLogAspect extends LogValueParser implements InitializingBe
             String detail = record.getDetail();
             if (record.getDetailArgs() != null && record.getDetailArgs().length > 0) {
                 detail = String.format(detail, record.getDetailArgs());
+                record.setDetail(detail);
             }
             spelTemplates.add(detail);
         }

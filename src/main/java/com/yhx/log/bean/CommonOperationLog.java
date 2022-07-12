@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 
 /**
@@ -49,6 +50,11 @@ public class CommonOperationLog {
     private String crtUser;
 
     /**
+     * 创建时间
+     */
+    private Date crtTime;
+
+    /**
      * 操作用户姓名
      */
     private String crtName;
@@ -57,5 +63,6 @@ public class CommonOperationLog {
      * 日志额外信息
      */
     private String detail;
+
 
 }
