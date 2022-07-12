@@ -50,10 +50,16 @@ public class OperationLogSource {
 
     private OperationLogRecord convertAnnotation2Object(AnnotatedElement element, OperationLog operationLog) {
         check(element, operationLog);
-        return OperationLogRecord.builder().module(operationLog.module())
-                .bizNo(operationLog.bizNo()).traceId(operationLog.traceId())
-                .operator(operationLog.operator()).detail(operationLog.detail()).success(operationLog.success())
-                .detailArgs(operationLog.detailArgs()).isBatch(operationLog.isBatch())
+        return OperationLogRecord.builder()
+                .module(operationLog.module())
+                .bizNo(operationLog.bizNo())
+                .traceId(operationLog.traceId())
+                .operator(operationLog.operator())
+                .detail(operationLog.detail())
+                .success(operationLog.success())
+                .detailArgs(operationLog.detailArgs())
+                .condition(operationLog.condition())
+                .isBatch(operationLog.isBatch())
                 .fail(operationLog.fail()).build();
     }
 

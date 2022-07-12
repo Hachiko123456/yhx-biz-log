@@ -1,5 +1,6 @@
 package com.yhx.log.service.impl;
 
+import com.google.common.collect.Lists;
 import com.yhx.log.bean.CommonOperationLog;
 import com.yhx.log.service.CommonOperationLogService;
 import lombok.extern.slf4j.Slf4j;
@@ -24,5 +25,10 @@ public class DefaultOperationLogServiceImpl implements CommonOperationLogService
     @Override
     public void record(List<CommonOperationLog> operationLogList) {
         Optional.ofNullable(operationLogList).ifPresent(o -> log.info("log record: {}", o));
+    }
+
+    @Override
+    public List<CommonOperationLog> getByBizNo(String bizNo) {
+        return Lists.newArrayList();
     }
 }
