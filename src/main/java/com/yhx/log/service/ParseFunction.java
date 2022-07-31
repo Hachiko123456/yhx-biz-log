@@ -1,5 +1,7 @@
 package com.yhx.log.service;
 
+import com.yhx.log.util.ArrayUtil;
+
 /**
  * @author yanghuaxu
  * @date 2022/6/8 10:04
@@ -14,6 +16,8 @@ public interface ParseFunction {
 
     String apply(Object value);
 
-    String apply(Object value, int index);
+    default String apply(Object value, int index) {
+        return this.apply(ArrayUtil.get(value, index));
+    }
 
 }
