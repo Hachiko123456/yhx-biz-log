@@ -4,6 +4,7 @@ import com.cvte.csb.base.commons.OperatingUser;
 import com.cvte.csb.base.context.CurrentContext;
 import com.yhx.log.bean.Operator;
 import com.yhx.log.service.OperatorService;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
@@ -11,6 +12,7 @@ import java.util.Optional;
  * @author yanghuaxu
  * @date 2023/8/28 16:39
  */
+@Service
 public class OperatorServiceImpl implements OperatorService {
 
     @Override
