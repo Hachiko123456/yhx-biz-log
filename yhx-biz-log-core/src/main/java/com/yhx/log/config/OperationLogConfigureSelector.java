@@ -4,7 +4,8 @@ import com.yhx.log.annotation.EnableOperationLog;
 import org.springframework.context.annotation.AdviceMode;
 import org.springframework.context.annotation.AdviceModeImportSelector;
 import org.springframework.context.annotation.AutoProxyRegistrar;
-import org.springframework.lang.Nullable;
+
+import javax.annotation.Nullable;
 
 /**
  * @author yanghuaxu
