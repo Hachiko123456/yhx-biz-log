@@ -1,4 +1,4 @@
-package com.cvte.yhx.log.entity;
+package com.yhx.log.entity;
 
 
 import io.swagger.annotations.ApiModel;

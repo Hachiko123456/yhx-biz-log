@@ -1,4 +1,4 @@
-package com.cvte.yhx.log.config;
+package com.yhx.log.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2023/8/28 17:29
  */
 @Configuration
-@MapperScan("com.cvte.yhx.log.mapper")
-@ComponentScan(basePackages = {"com.cvte.yhx.log"})
+@MapperScan("com.yhx.log.mapper")
+@ComponentScan(basePackages = {"com.yhx.log"})
 public class MapperScanConfig {
 }

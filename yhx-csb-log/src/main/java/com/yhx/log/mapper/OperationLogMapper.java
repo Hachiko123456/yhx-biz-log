@@ -1,8 +1,7 @@
-package com.cvte.yhx.log.mapper;
+package com.yhx.log.mapper;
 
 import com.cvte.csb.jdbc.mybatis.mapper.CommonMapper;
-import com.cvte.yhx.log.entity.OperationLog;
-import org.mybatis.spring.annotation.MapperScan;
+import com.yhx.log.entity.OperationLog;
 
 /**
  * Mapper接口
