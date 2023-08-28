@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cvte.yhx.log.mapper.OperationLogMapper">
-    <resultMap id="BaseResultMap" type="com.cvte.yhx.log.entity.OperationLog">
+<mapper namespace="com.yhx.log.mapper.OperationLogMapper">
+    <resultMap id="BaseResultMap" type="com.yhx.log.entity.OperationLog">
         <result column="id" property="id"/>
         <result column="module" property="module"/>
         <result column="biz_no" property="bizNo"/>

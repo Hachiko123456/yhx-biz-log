@@ -1,4 +1,4 @@
-package com.cvte.yhx.log.service.impl;
+package com.yhx.log.service.impl;
 
 import com.cvte.csb.web.log.entity.BaseLog;
 import com.yhx.log.service.TraceService;

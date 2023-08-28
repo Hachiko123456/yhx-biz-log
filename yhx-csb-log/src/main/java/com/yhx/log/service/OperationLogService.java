@@ -1,8 +1,7 @@
-package com.cvte.yhx.log.service;
+package com.yhx.log.service;
 
 import com.cvte.csb.jdbc.mybatis.service.IBaseService;
-import com.cvte.yhx.log.entity.OperationLog;
-import com.yhx.log.service.CommonOperationLogService;
+import com.yhx.log.entity.OperationLog;
 
 /**
  * 服务类
