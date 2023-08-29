@@ -1,6 +1,5 @@
 package com.yhx.log.config;
 
-import com.yhx.log.annotation.EnableOperationLog;
 import com.yhx.log.constant.LogRecordProperties;
 import com.yhx.log.evaluator.OperationLogExpressionEvaluator;
 import com.yhx.log.factory.ParseFunctionFactory;
@@ -24,9 +23,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
-import org.springframework.context.annotation.ImportAware;
 import org.springframework.core.annotation.AnnotationAttributes;
-import org.springframework.core.type.AnnotationMetadata;
 
 import java.util.List;
 
@@ -37,7 +34,7 @@ import java.util.List;
 @Slf4j
 @Configuration
 @EnableConfigurationProperties({LogRecordProperties.class})
-public class OperationLogConfig implements ImportAware {
+public class OperationLogConfig {
 
     private AnnotationAttributes enableLogRecord;
 
@@ -152,11 +149,4 @@ public class OperationLogConfig implements ImportAware {
         return function;
     }
 
-    @Override
-    public void setImportMetadata(AnnotationMetadata importMetadata) {
-        this.enableLogRecord = AnnotationAttributes.fromMap(importMetadata.getAnnotationAttributes(EnableOperationLog.class.getName(), false));
-        if (this.enableLogRecord == null) {
-            log.warn("未找到@EnableOperationLog注解");
-        }
-    }
 }
