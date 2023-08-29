@@ -37,7 +37,7 @@ import java.util.List;
 @Slf4j
 @Configuration
 @EnableConfigurationProperties({LogRecordProperties.class})
-public class OperationLogConfig implements ImportAware {
+public class OperationLogConfig {
 
     private AnnotationAttributes enableLogRecord;
 
@@ -152,11 +152,4 @@ public class OperationLogConfig implements ImportAware {
         return function;
     }
 
-    @Override
-    public void setImportMetadata(AnnotationMetadata importMetadata) {
-        this.enableLogRecord = AnnotationAttributes.fromMap(importMetadata.getAnnotationAttributes(EnableOperationLog.class.getName(), false));
-        if (this.enableLogRecord == null) {
-            log.warn("未找到@EnableOperationLog注解");
-        }
-    }
 }
