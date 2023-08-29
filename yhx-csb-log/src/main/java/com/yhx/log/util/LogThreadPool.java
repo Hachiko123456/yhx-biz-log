@@ -1,4 +1,4 @@
-package com.cvte.yhx.log.util;
+package com.yhx.log.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.DisposableBean;
