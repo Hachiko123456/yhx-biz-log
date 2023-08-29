@@ -1,10 +1,10 @@
-package com.cvte.yhx.log.service.impl;
+package com.yhx.log.service.impl;
 
 import com.cvte.csb.jdbc.mybatis.biz.BaseBiz;
 import com.cvte.csb.toolkit.UUIDUtils;
-import com.cvte.yhx.log.entity.OperationLog;
-import com.cvte.yhx.log.mapper.OperationLogMapper;
-import com.cvte.yhx.log.service.OperationLogService;
+import com.yhx.log.entity.OperationLog;
+import com.yhx.log.mapper.OperationLogMapper;
+import com.yhx.log.service.OperationLogService;
 import com.yhx.log.bean.CommonOperationLog;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;

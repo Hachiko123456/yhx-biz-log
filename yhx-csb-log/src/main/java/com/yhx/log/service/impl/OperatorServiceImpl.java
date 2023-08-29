@@ -1,4 +1,4 @@
-package com.cvte.yhx.log.service.impl;
+package com.yhx.log.service.impl;
 
 import com.cvte.csb.base.commons.OperatingUser;
 import com.cvte.csb.base.context.CurrentContext;
